@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Images/Storyline/1.png" type="Texture" id=1]
+[ext_resource path="res://Images/Storyline/2.png" type="Texture" id=2]
+[ext_resource path="res://Storyline/Chatbox2.gd" type="Script" id=3]
+[ext_resource path="res://Storyline/Skip2.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 1027, 256 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 132.0
+margin_top = 432.0
+margin_right = 906.0
+margin_bottom = 621.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Chatbox" type="Label" parent="Panel"]
+margin_left = 80.0
+margin_top = 24.0
+margin_right = 697.0
+margin_bottom = 100.0
+text = "First Level, there are FIVE Enemies and THREE Pies. You need to collect all Pies and come to the
+ Second Level.
+Second Level, there are also FIVE Enemies and THREE Pies. You also need to collect all Pies and 
+finish all level. Good luck!"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Panel"]
+margin_left = 31.0
+margin_top = 124.0
+margin_right = 135.0
+margin_bottom = 174.0
+text = "Skip"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Panel"]
+position = Vector2( 687.17, 126.72 )
+scale = Vector2( 0.34, 0.384 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}

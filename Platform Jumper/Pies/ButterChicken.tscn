@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Images/pie/ButterChickenIdle1.png" type="Texture" id=1]
+[ext_resource path="res://Images/pie/ButterChickenIdle0.png" type="Texture" id=2]
+[ext_resource path="res://Images/pie/ButterChickenIdle3.png" type="Texture" id=3]
+[ext_resource path="res://Images/pie/ButterChickenIdle2.png" type="Texture" id=4]
+[ext_resource path="res://Pies/ButterChicken.gd" type="Script" id=5]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 35.5859
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "pie1",
+"speed": 5.0
+} ]
+
+[node name="ButterChicken" type="Area2D"]
+collision_layer = 8
+collision_mask = 9
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 6.21553, -0.460403 )
+shape = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 5.75511, -2.30205 )
+scale = Vector2( 1.17985, 1.14388 )
+frames = SubResource( 1 )
+animation = "pie1"
+frame = 3
+playing = true
+[connection signal="body_entered" from="." to="." method="_on_ButterChicken_body_entered"]

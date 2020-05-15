@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/MusMus-BGM-100.wav-1c934a87965d1543c8b8e108025d83ce.sample"
+
+[deps]
+
+source_file="res://Music/MusMus-BGM-100.wav"
+dest_files=[ "res://.import/MusMus-BGM-100.wav-1c934a87965d1543c8b8e108025d83ce.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

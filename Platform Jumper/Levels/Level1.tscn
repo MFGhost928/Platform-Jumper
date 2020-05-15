@@ -1,0 +1,201 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Images/Tiles/spritesheet_ground.png" type="Texture" id=1]
+[ext_resource path="res://Images/Background/bg1.jpg" type="Texture" id=2]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Pies/ButterChicken.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Pies/SteacknCheese.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Pies/MincePie.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Door.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Music/MusMus-BGM-086.wav" type="AudioStream" id=9]
+[ext_resource path="res://Storyline/Story.tscn" type="PackedScene" id=10]
+
+[sub_resource type="TileSet" id=1]
+0/name = "spritesheet_ground.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 901, 1417 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 64, 64 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends TileMap
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1158.24, 22.9824 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 14.27, 893.733 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 192.384, 31.6223 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 191.326, 32.7537 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 194.27, 33.08 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 192.072, 32.419 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 129.218, 37.0316 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 191.413, 32.6344 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 194.71, 31.5356 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 193.611, 31.0951 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 192.51, 30.2172 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 12.958, 915.877 )
+
+[node name="Level1" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 0.190159, -1073.34 )
+scale = Vector2( 4.77228, 5.92088 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+format = 1
+tile_data = PoolIntArray( -655358, 0, 131074, -655357, 0, 131073, -655356, 0, 131072, -655355, 0, 131073, -655354, 0, 131072, -655353, 0, 131075, -524278, 0, 131074, -524277, 0, 131073, -524276, 0, 131072, -524275, 0, 131075, -524271, 0, 131074, -524270, 0, 131073, -524269, 0, 131072, -524268, 0, 131073, -524267, 0, 131072, -524266, 0, 131075, -327655, 0, 131074, -327654, 0, 131073, -327653, 0, 131072, -327652, 0, 131073, -327651, 0, 131072, -327650, 0, 131075, -196592, 0, 131074, -196591, 0, 131073, -196590, 0, 131072, -196589, 0, 131073, -196588, 0, 131072, -196587, 0, 131075, -65529, 0, 131074, -65528, 0, 131073, -65527, 0, 0, -65526, 0, 131073, -65525, 0, 0, -65524, 0, 131075, 131082, 0, 131074, 131083, 0, 131073, 131084, 0, 131072, 131085, 0, 131073, 131086, 0, 131072, 131087, 0, 131075, 327686, 0, 131074, 327687, 0, 131073, 327688, 0, 131072, 327689, 0, 131073, 327690, 0, 131072, 327691, 0, 131075, 327707, 0, 131074, 327708, 0, 131073, 327709, 0, 131072, 327710, 0, 131073, 327711, 0, 131072, 327712, 0, 131075, 524288, 0, 0, 524289, 0, 131073, 524290, 0, 0, 524291, 0, 131073, 524292, 0, 0, 524293, 0, 131073, 524294, 0, 0, 524295, 0, 131073, 524296, 0, 0, 524297, 0, 131073, 524298, 0, 0, 524299, 0, 131073, 524300, 0, 0, 524301, 0, 131073, 524302, 0, 0, 524303, 0, 131073, 524304, 0, 0, 524305, 0, 131073, 524306, 0, 0, 524307, 0, 131073, 524308, 0, 0, 524309, 0, 131073, 524310, 0, 0, 524311, 0, 131073, 524312, 0, 0, 524313, 0, 131073, 524314, 0, 0, 524315, 0, 131073, 524316, 0, 0, 524317, 0, 131073, 524318, 0, 0, 524319, 0, 131073, 524320, 0, 0, 524321, 0, 131073, 524322, 0, 0, 524323, 0, 131075, 589824, 0, 2, 589825, 0, 3, 589826, 0, 2, 589827, 0, 3, 589828, 0, 2, 589829, 0, 3, 589830, 0, 2, 589831, 0, 3, 589832, 0, 2, 589833, 0, 3, 589834, 0, 2, 589835, 0, 3, 589836, 0, 2, 589837, 0, 3, 589838, 0, 2, 589839, 0, 3, 589840, 0, 2, 589841, 0, 3, 589842, 0, 2, 589843, 0, 3, 589844, 0, 2, 589845, 0, 3, 589846, 0, 2, 589847, 0, 3, 589848, 0, 2, 589849, 0, 3, 589850, 0, 2, 589851, 0, 3, 589852, 0, 2, 589853, 0, 3, 589854, 0, 2, 589855, 0, 3, 589856, 0, 2, 589857, 0, 3, 589858, 0, 2, 589859, 0, 3, 655360, 0, 2, 655361, 0, 3, 655362, 0, 2, 655363, 0, 3, 655364, 0, 2, 655365, 0, 3, 655366, 0, 2, 655367, 0, 3, 655368, 0, 2, 655369, 0, 3, 655370, 0, 2, 655371, 0, 3, 655372, 0, 2, 655373, 0, 3, 655374, 0, 2, 655375, 0, 3, 655376, 0, 2, 655377, 0, 3, 655378, 0, 2, 655379, 0, 3, 655380, 0, 2, 655381, 0, 3, 655382, 0, 2, 655383, 0, 3, 655384, 0, 2, 655385, 0, 3, 655386, 0, 2, 655387, 0, 3, 655388, 0, 2, 655389, 0, 3, 655390, 0, 2, 655391, 0, 3, 655392, 0, 2, 655393, 0, 3, 655394, 0, 2, 655395, 0, 3, 720896, 0, 2, 720897, 0, 3, 720898, 0, 2, 720899, 0, 3, 720900, 0, 2, 720901, 0, 3, 720902, 0, 2, 720903, 0, 3, 720904, 0, 2, 720905, 0, 3, 720906, 0, 2, 720907, 0, 3, 720908, 0, 2, 720909, 0, 3, 720910, 0, 2, 720911, 0, 3, 720912, 0, 2, 720913, 0, 3, 720914, 0, 2, 720915, 0, 3, 720916, 0, 2, 720917, 0, 3, 720918, 0, 2, 720919, 0, 3, 720920, 0, 2, 720921, 0, 3, 720922, 0, 2, 720923, 0, 3, 720924, 0, 2, 720925, 0, 3, 720926, 0, 2, 720927, 0, 3, 720928, 0, 2, 720929, 0, 3, 720930, 0, 2, 720931, 0, 3 )
+script = SubResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 215.776, 459.333 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1153.4, 537.159 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -11.1337, -174.286 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 576.134, 351.893 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 830.985, 160.532 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 640.63, -29.6691 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 318.667, -608.764 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 769.196, -479.099 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1280.16, -479.099 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1216.43, -160.432 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1791.13, -287.899 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1919.69, 353.83 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2298.94, -159.899 )
+shape = SubResource( 14 )
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1447, 450.987 )
+hp = 3
+
+[node name="Enemy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1229.38, -249.026 )
+max_speed = 75
+hp = 2
+
+[node name="Enemy3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 768.926, -569.44 )
+max_speed = 65
+hp = 3
+
+[node name="Enemy4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 702.678, 65.2595 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1695.23, -382.451 )
+hp = 2
+
+[node name="ButterChicken" parent="." instance=ExtResource( 5 )]
+position = Vector2( 319.247, -666.844 )
+collision_mask = 2
+
+[node name="MincePie" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1786.95, -340.806 )
+collision_layer = 8
+collision_mask = 2
+
+[node name="SteacknCheese" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1911.33, 301.451 )
+collision_layer = 8
+collision_mask = 2
+
+[node name="Door" parent="." instance=ExtResource( 8 )]
+position = Vector2( 231.778, -737.89 )
+target_stage = "res://Levels/Level2.tscn"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 9 )
+autoplay = true
+
+[node name="Story" parent="." instance=ExtResource( 10 )]
+position = Vector2( 118.926, 518.104 )
+[connection signal="body_entered" from="Story" to="Player" method="_on_Story_body_entered"]

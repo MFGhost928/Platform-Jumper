@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Images/Storyline/3.png" type="Texture" id=1]
+[ext_resource path="res://Storyline/Story.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 49.2532, 46.5829 )
+
+[node name="Story" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -38.4415, -52.1708 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -38.6048, -49.8735 )
+scale = Vector2( 0.16903, 0.141736 )
+texture = ExtResource( 1 )
+[connection signal="body_entered" from="." to="." method="_on_Story_body_entered"]
